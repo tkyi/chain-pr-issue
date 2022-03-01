@@ -1,30 +1,8 @@
 shared:
-  image: node:12
-  environment:
-    TEST_ENV: bar
+  image: node:16
 
 jobs:
   test:
     requires: [~pr, ~commit]
     steps:
-      - empty: echo "empty job"
-
-  job_a:
-    steps:
-      - echo: echo $TEST_ENV
-      - sleep: sleep 60
-
-  job_b:
-    requires: [job_a]
-    steps:
-      - echo: echo $TEST_ENV
-
-  job_c:
-    steps:
-      - echo: echo $TEST_ENV
-      - sleep: sleep 60
-
-  job_d:
-    requires: [job_c]
-    steps:
-      - echo: echo $TEST_ENV
+      - echo "test"
