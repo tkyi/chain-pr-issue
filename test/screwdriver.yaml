@@ -13,3 +13,4 @@ jobs:
       - show: |
           echo "Region: $(meta get parameters.region.value)"
           echo "Cluster: $(meta get parameters.cluster.value)"
+          echo "test"
