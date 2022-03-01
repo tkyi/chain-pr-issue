@@ -1,0 +1,15 @@
+
+parameters:
+  region:
+    value: "kks"
+    description: "Region setting"
+  cluster: ["cluster1", "cluster2"]
+ 
+jobs:
+  main:
+    requires: [~pr, ~commit]
+    image: node:16
+    steps:
+      - show: |
+          echo "Region: $(meta get parameters.region.value)"
+          echo "Cluster: $(meta get parameters.cluster.value)"
