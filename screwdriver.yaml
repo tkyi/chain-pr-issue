@@ -5,4 +5,8 @@ jobs:
   test:
     requires: [~pr, ~commit]
     steps:
-      - meta get build.jobName
+      - metaset: meta set hello "Hello Meta!"
+  show-meta:
+    requires: [test]
+    steps:
+      - meta get hello
