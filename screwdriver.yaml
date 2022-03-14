@@ -5,4 +5,4 @@ jobs:
   test:
     requires: [~pr, ~commit]
     steps:
-      - echo "test"
+      - meta get build.jobName
