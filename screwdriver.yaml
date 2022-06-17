@@ -1,8 +1,15 @@
 shared:
   image: node:16
 
+annotations:
+  screwdriver.cd/chainPR: true
+
 jobs:
   test:
     requires: [~pr, ~commit]
+    steps:
+      - echo "test"
+  test2:
+    requires: [test]
     steps:
       - echo "test"
