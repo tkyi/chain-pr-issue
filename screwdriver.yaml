@@ -8,7 +8,7 @@ jobs:
   test:
     requires: [~pr, ~commit]
     steps:
-      - echo "test"
+      - echo "test2"
   test2:
     requires: [test]
     steps:
